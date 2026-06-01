@@ -1,0 +1,141 @@
+.dsa-section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dsa-overview {
+  margin-bottom: 4rem;
+}
+
+.dsa-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.dsa-stat-icon {
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.dsa-stat-card:hover .dsa-stat-icon {
+  color: var(--accent);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px var(--accent-glow-strong));
+}
+
+.dsa-stat-icon.accent-icon {
+  color: var(--accent);
+}
+
+.dsa-stat-val {
+  font-family: var(--font-headings);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.dsa-stat-val.link-val {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dsa-stat-val.link-val:hover {
+  color: var(--accent);
+}
+
+.dsa-stat-lbl {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Topic Breakdown styling */
+.dsa-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brain-icon {
+  color: var(--accent);
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+.dsa-topics-grid {
+  margin-top: 1rem;
+}
+
+.dsa-topic-card {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.dsa-topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.dsa-topic-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.dsa-difficulty-badge {
+  font-size: 0.65rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+  text-transform: none;
+  flex-shrink: 0;
+}
+
+.dsa-topic-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: auto;
+}
+
+.dsa-solved-count {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.count-num {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-right: 2px;
+}
+
+.dsa-code-link {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .dsa-overview {
+    gap: 1.2rem;
+  }
+}
