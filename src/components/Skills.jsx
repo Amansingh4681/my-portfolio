@@ -25,9 +25,9 @@ const skillCategories = [
     title: "Backend & Development",
     icon: <Wrench size={22} />,
     skills: [
-      { name: "Node.js Basics", level: 60 },
+      { name: "Node.js", level: 80 },
       { name: "Git / GitHub Versioning", level: 80 },
-      { name: "AI Coding Assistant Tools", level: 90 }
+      { name: "Mern stack ", level: 90 }
     ]
   }
 ];
