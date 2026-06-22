@@ -11,14 +11,25 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus('submitting');
 
-    // Simulate API request delay
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
 
@@ -26,7 +37,13 @@ export default function Contact() {
       setTimeout(() => {
         setStatus('idle');
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Contact submission error:', error);
+      setStatus('error');
+      setTimeout(() => {
+        setStatus('idle');
+      }, 6000);
+    }
   };
 
   return (
@@ -135,6 +152,12 @@ export default function Contact() {
                   ></textarea>
                   <label htmlFor="message" className="form-label">Your Message</label>
                 </div>
+
+                {status === 'error' && (
+                  <div style={{ color: '#f87171', fontSize: '0.85rem', marginBottom: '1rem', textAlign: 'center', background: 'rgba(239, 68, 68, 0.1)', padding: '0.75rem', borderRadius: '8px', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                    Failed to send message. Please try again.
+                  </div>
+                )}
 
                 <button
                   type="submit"
