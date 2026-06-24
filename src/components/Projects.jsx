@@ -11,7 +11,7 @@ const projectsData = [
     tagline: "Highly interactive personal site styled with native glassmorphic CSS.",
     description: "A showcase portfolio that incorporates smooth component scrolling, a local storage-backed accent color palette customizer, responsive drawer transitions, and clean typography. Coded with generative AI tools.",
     tags: ["React", "HTML5", "Vanilla CSS", "Vite", "AI tools"],
-    github: "https://github.com/Amansingh4681",
+    github: "https://github.com/Amansingh4681/my-portfolio",
     demo: "https://example.com",
     isComingSoon: false,
     details: {
@@ -21,37 +21,71 @@ const projectsData = [
     }
   },
   {
-    id: 2,
-    title: "React Web Application",
-    category: "frontend",
-    tagline: "Under construction — coming soon.",
-    description: "An upcoming React-based web application focused on state management, interactive list layouts, and dynamic frontend components.",
-    tags: ["React", "JavaScript", "CSS3"],
-    github: "https://github.com/Amansingh4681",
-    demo: "#",
-    isComingSoon: true,
-    details: {
-      challenge: "TBD",
-      solution: "TBD",
-      features: ["Component lifecycle design", "State bindings", "AI-assisted troubleshooting"]
-    }
-  },
-  {
-    id: 3,
-    title: "Node.js Backend Service",
-    category: "backend",
-    tagline: "Under planning — coming soon.",
-    description: "An upcoming Node.js and Express RESTful server featuring database connectivity, router handlers, and request checks.",
-    tags: ["Node.js", "Express", "REST API"],
-    github: "https://github.com/Amansingh4681",
-    demo: "#",
-    isComingSoon: true,
-    details: {
-      challenge: "TBD",
-      solution: "TBD",
-      features: ["REST endpoints setup", "JSON token validation", "Error middleware routines"]
-    }
+  id: 2,
+  title: "Image Gallery App",
+  category: "frontend",
+  tagline: "Fetches and displays images from a public API.",
+  description: "A responsive frontend application that retrieves images from an external API and dynamically renders them in a clean gallery layout. Built to practice API integration, asynchronous JavaScript, and DOM manipulation.",
+  tags: ["HTML", "CSS", "JavaScript", "API"],
+  github: "https://github.com/Amansingh4681/Gallery_project",
+  demo: "#",
+  isComingSoon: false,
+  details: {
+    challenge: "Fetching and displaying API data efficiently while handling loading states and errors.",
+    solution: "Used JavaScript Fetch API with async/await to retrieve image data and dynamically generate image cards on the page.",
+    features: [
+      "Image fetching from external API",
+      "Dynamic image rendering",
+      "Responsive gallery layout",
+      "Loading and error handling"
+    ]
   }
+},
+  {
+  id: 3,
+  title: "Post Upload API",
+  category: "backend",
+  tagline: "Upload and retrieve image-based posts.",
+  description: "A backend-focused project built with Node.js and Express that allows users to upload images and create posts. The uploaded content is stored and served through REST APIs, while a simple frontend is used to test post creation and display the feed.",
+  tags: ["Node.js", "Express", "MongoDB", "Multer"],
+  github: "https://github.com/Amansingh4681/Post_creation_backend_project",
+  demo: "#",
+  isComingSoon: false,
+  details: {
+    challenge: "Managing image uploads and serving uploaded content through APIs.",
+    solution: "Implemented Express routes for post creation, used Multer for file uploads, and stored post data in MongoDB for retrieval on the frontend.",
+    features: [
+      "Image upload handling",
+      "Post creation API",
+      "MongoDB data storage",
+      "RESTful endpoints",
+      "Feed data retrieval"
+    ]
+  }
+},
+ {
+id: 4,
+title: "Kanban Task Board",
+category: "frontend",
+tagline: "Organize and track tasks with drag-and-drop functionality.",
+description: "A JavaScript-based Kanban board that helps users manage tasks across different stages such as To Do, In Progress, and Done. Task data is stored in Local Storage, ensuring persistence even after the browser is refreshed.",
+tags: ["JavaScript", "HTML", "CSS", "Local Storage"],
+github: "https://github.com/Amansingh4681/kanban_board",
+demo: "#",
+isComingSoon: false,
+details: {
+challenge: "Maintaining task state and persisting data without a backend.",
+solution: "Used Local Storage to save task information and dynamically updated the UI using JavaScript DOM manipulation.",
+features: [
+"Create and delete tasks",
+"Drag-and-drop task management",
+"Local Storage persistence",
+"Task status tracking",
+"Dynamic UI updates"
+]
+}
+},
+
 ];
 
 export default function Projects() {
