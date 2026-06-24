@@ -206,7 +206,7 @@ export default function Projects() {
                 <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn btn-secondary">
                   <Github size={16} /> Code
                 </a>
-                <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn btn-primary">
+                <a href="https://kanban-board-iota-navy.vercel.app/"target="_blank" rel="noreferrer" className="btn btn-primary">
                   <ExternalLink size={16} /> Demo
                 </a>
               </div>
