@@ -71,7 +71,7 @@ tagline: "Organize and track tasks with drag-and-drop functionality.",
 description: "A JavaScript-based Kanban board that helps users manage tasks across different stages such as To Do, In Progress, and Done. Task data is stored in Local Storage, ensuring persistence even after the browser is refreshed.",
 tags: ["JavaScript", "HTML", "CSS", "Local Storage"],
 github: "https://github.com/Amansingh4681/kanban_board",
-demo: "#",
+demo: "https://kanban-board-iota-navy.vercel.app/",
 isComingSoon: false,
 details: {
 challenge: "Maintaining task state and persisting data without a backend.",
@@ -85,6 +85,29 @@ features: [
 ]
 }
 },
+
+{
+  id: 5,
+  title: "JS Image Editor",
+  category: "frontend",
+  tagline: "Upload, edit, and download images directly in the browser.",
+  description: "A lightweight, browser-based image editing tool built with vanilla JavaScript and the HTML5 Canvas API. Users can upload images from their device, apply custom edits, and download the final result entirely on the client side without needing a backend server.",
+  tags: ["JavaScript", "HTML5 Canvas", "CSS", "File API"],
+  github: "https://github.com/Amansingh4681/Image_Editor",
+  demo: "#",
+  isComingSoon: false,
+  details: {
+    challenge: "Manipulating pixel data efficiently and handling file reading/writing purely on the client side.",
+    solution: "Leveraged the HTML5 <canvas> API to render and modify image pixel data, alongside the File API to handle seamless local uploads and trigger downloads.",
+    features: [
+      "Local image upload via FileReader",
+      "Canvas-based image rendering and editing",
+      "Direct device download functionality",
+      "Client-side processing with zero backend",
+      "Dynamic UI updates for applied filters"
+    ]
+  }
+}
 
 ];
 
@@ -206,7 +229,7 @@ export default function Projects() {
                 <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn btn-secondary">
                   <Github size={16} /> Code
                 </a>
-                <a href="https://kanban-board-iota-navy.vercel.app/"target="_blank" rel="noreferrer" className="btn btn-primary">
+                <a href={selectedProject.demo}target="_blank" rel="noreferrer" className="btn btn-primary">
                   <ExternalLink size={16} /> Demo
                 </a>
               </div>
